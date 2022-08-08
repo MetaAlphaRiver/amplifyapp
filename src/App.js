@@ -8,21 +8,25 @@ import logo from './logo.svg';
 import './App.css';
 import SignIn from './components/SignIn/SignIn';
 
+// import { Amplify, Auth } from 'aws-amplify';
+// import awsconfig from './aws-exports';
+// Amplify.configure(awsconfig);
+import { Amplify } from 'aws-amplify';
+import { withAuthenticator } from '@aws-amplify/ui-react';
+import '@aws-amplify/ui-react/styles.css';
 
-function App() {
+import awsExports from './aws-exports';
+Amplify.configure(awsExports);
+
+function App({ signOut, user }) {
   return (
-    <div className="App">
-      <Container maxWidth="sm">
-      <Box sx={{ my: 4 }}>
-        <Typography variant="h4" component="h1" gutterBottom>
-          Wellcome to chat with Leora
-          <SignIn />
-        </Typography>
-        <ProTip />
-      </Box>
-    </Container>
-    </div>
+    <>
+      <h1>Hello {user.username}</h1>
+      <button onClick={signOut}>Sign out</button>
+    </>
   );
 }
 
-export default App;
+export default withAuthenticator(App);
+
+

@@ -1,0 +1,45 @@
+{
+  "version": "1",
+  "cognitoConfig": {
+    "identityPoolName": "amplifyapp6a6dee09_identitypool_6a6dee09",
+    "allowUnauthenticatedIdentities": false,
+    "resourceNameTruncated": "amplif6a6dee09",
+    "userPoolName": "amplifyapp6a6dee09_userpool_6a6dee09",
+    "autoVerifiedAttributes": [
+      "email"
+    ],
+    "mfaConfiguration": "OFF",
+    "mfaTypes": [
+      "SMS Text Message"
+    ],
+    "smsAuthenticationMessage": "Your authentication code is {####}",
+    "smsVerificationMessage": "Your verification code is {####}",
+    "emailVerificationSubject": "Your verification code",
+    "emailVerificationMessage": "Your verification code is {####}",
+    "defaultPasswordPolicy": false,
+    "passwordPolicyMinLength": 8,
+    "passwordPolicyCharacters": [],
+    "requiredAttributes": [
+      "email"
+    ],
+    "aliasAttributes": [],
+    "userpoolClientGenerateSecret": false,
+    "userpoolClientRefreshTokenValidity": 30,
+    "userpoolClientWriteAttributes": [
+      "email"
+    ],
+    "userpoolClientReadAttributes": [
+      "email"
+    ],
+    "userpoolClientLambdaRole": "amplif6a6dee09_userpoolclient_lambda_role",
+    "userpoolClientSetAttributes": false,
+    "sharedId": "6a6dee09",
+    "resourceName": "amplifyapp6a6dee09",
+    "authSelections": "identityPoolAndUserPool",
+    "useDefault": "default",
+    "userPoolGroupList": [],
+    "serviceName": "Cognito",
+    "usernameCaseSensitive": false,
+    "useEnabledMfas": true
+  }
+}
